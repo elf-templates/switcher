@@ -1,8 +1,8 @@
-@charset "UTF-8";
-@import "./base.css";
-@import "./mixin.scss";
-@import "./loading.scss";
+/**
+ * Main Page
+ */
 $red: #fc2441;
+
 body {
   overflow: hidden;
   font-size: 30px;
@@ -14,9 +14,7 @@ body {
   height: 100%;
 }
 
-
 /* 箭头 */
-
 .arrow {
   display: block;
   width: 42px;
@@ -26,16 +24,15 @@ body {
   left: 50%;
   margin-left: -21px;
   z-index: 99;
-  // transform: rotate(45deg);
   animation: arrow-ani 3s infinite;
 }
 
 .arrow-w {
-  @include bg('../img/icon/arrow_w.png');
+  @include bg-wh('../img/icon/arrow_w.png');
 }
 
 .arrow-r {
-  @include bg('../img/icon/arrow_r.png');
+  @include bg-wh('../img/icon/arrow_r.png');
 }
 
 .swiper-container {
@@ -45,6 +42,7 @@ body {
 
 .swiper-slide {
   overflow: hidden;
+
   .page {
     position: absolute;
     top: 0;
@@ -70,17 +68,17 @@ body {
   &-1 {
     top: 44px;
     left: 50px;
-    @include bg('../img/icon/home-1.png');
+    @include bg-wh('../img/icon/home-1.png');
   }
   &-2 {
     left: 50px;
     bottom: 50px;
-    @include bg('../img/icon/home-2.png');
+    @include bg-wh('../img/icon/home-2.png');
   }
   &-3 {
     right: 50px;
     bottom: 50px;
-    @include bg('../img/icon/home-3.png');
+    @include bg-wh('../img/icon/home-3.png');
   }
   &-4 {
     top: 50%;
@@ -108,6 +106,7 @@ body {
 @mixin moveAndFadeAnimation($distance, $duration, $delay) {
   animation: move-and-fade $duration linear infinite;
   animation-delay: $delay;
+
   @keyframes move-and-fade {
     0% {
       opacity: 0;
@@ -128,23 +127,22 @@ body {
 
 .meet {
   background-color: $red;
+
   &>div>div,
   &>div>div>div {
     background-repeat: no-repeat;
   }
   &-1 {
     margin: 196px auto 0;
-    @include bg('../img/icon/meet-1.png');
+    @include bg-wh('../img/icon/meet-1.png');
   }
   &-2 {
     position: absolute;
     left: 50px;
     bottom: 60px;
-    @include bg('../img/icon/meet-2.png');
+    @include bg-wh('../img/icon/meet-2.png');
   }
   .meet-bubble {
-    // filter: blur(0);
-    // backface-visibility: hidden;
     display: block;
     margin: 66px auto 0;
     padding: 1px;
@@ -158,18 +156,15 @@ body {
     margin-left: -30.5px;
     width: 61px;
     height: 46px;
-    z-index: 10px;
+
     i {
       position: absolute;
       display: inline-block;
       width: 8px;
       opacity: 0;
-      // height: 20px;
-      // background-color: $red;
     }
     &.air-active {
       i {
-        // opacity: 1;
         &:nth-child(1) {
           left: 18px;
           top: -20px;
@@ -193,7 +188,6 @@ body {
     height: 46px;
   }
   &-txt-1 {
-    // margin: 58px auto 0
     position: absolute;
     top: 590px;
     left: 50%;
@@ -202,43 +196,35 @@ body {
     height: 228px;
   }
   &-txt-2 {
-    // margin: 58px auto 0;
     position: absolute;
     top: 590px;
-    // top: 1377px;
     left: 50%;
     margin-left: -166px;
     width: 332px;
     height: 178px;
-    // transform: scale(0);
   }
 }
 
 .city {
   background-color: #FFF;
+
   &>div>div {
     background-repeat: no-repeat;
   }
   &-1 {
     margin: 76px auto 0;
-    // width: 370px;
-    // height: 131px;
-    // background-image: url(../img/city-1.jpg);
-    // background-size: 100% 100%;
-    @include bg('../img/city-1.jpg');
+    @include bg-wh('../img/city-1.jpg');
   }
   &-map {
-    margin: 106px auto 0;
-    // width: 750px;
-    // height: 654px;
-    // background-image: url(../img/city-map.jpg);
-    // background-size: 100% 100%;
-    @include bg('../img/city-map.jpg');
     position: relative;
+    margin: 106px auto 0;
+    @include bg-wh('../img/city-map.jpg');
+
     span {
+      position: absolute;
       font-size: 28px;
       color: #000;
-      position: absolute;
+
       .red-dot-flash {
         content: " ";
         display: inline-block;
@@ -259,11 +245,7 @@ body {
         top: 40px;
         left: 50%;
         margin-left: -11.5px;
-        // width: 23px;
-        // height: 30px;
-        // background-repeat: no-repeat;
-        // background-image: url(../img/icon/city-red-dot.png);
-        @include bg('../img/icon/city-red-dot.png');
+        @include bg-wh('../img/icon/city-red-dot.png');
       }
       &:nth-child(1) {
         top: 14px;
@@ -335,12 +317,8 @@ body {
     position: absolute;
     left: 72px;
     bottom: 50px;
-    // width: 15px;
-    // height: 255px;
-    // background-image: url(../img/city-2.jpg);
-    // background-size: 100% 100%;
     z-index: 2;
-    @include bg('../img/city-2.jpg');
+    @include bg-wh('../img/city-2.jpg');
   }
 }
 
@@ -360,7 +338,6 @@ body {
 /**
  * keyframes
  */
-
 @keyframes arrow-ani {
   0%,
   20%,

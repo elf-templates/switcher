@@ -1,8 +1,9 @@
 require('src/index.html')
-require('src/css/main.scss')
+require('src/css/package.scss')
 
 require('swiper/dist/css/swiper.css')
 require('swiper/dist/js/swiper.js')
+
 window.anime = require('animejs/anime.js')
 var Preloader = require('preloader.js')
 
@@ -197,7 +198,7 @@ meet2.enter = function (done) {
 }
 
 
-function init(done) {
+function init (done) {
   var isSwipering = false;
 
   var mySwiper = new Swiper('#o2_swiper', {

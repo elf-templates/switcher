@@ -6,8 +6,6 @@
     "start": "elf start",
     "build": "elf build"
   },
-  "devDependencies": {
-  },
   "dependencies": {
     "animejs": "1.1.1",
     "swiper": "3.4.0",
